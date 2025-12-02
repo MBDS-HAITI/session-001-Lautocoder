@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
-
+@import "tailwindcss";
 * {
   box-sizing: border-box;
 }
@@ -47,11 +47,11 @@ header p {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-main {
+/* main {
   width: 90%;
   max-width: 50rem;
   margin: auto;
-}
+} */
 
 #core-concepts {
   padding: 2rem;
