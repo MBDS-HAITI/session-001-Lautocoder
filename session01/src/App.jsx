@@ -18,9 +18,20 @@ function Header() {
 }
 
 function MaintContent() {
+
+  const date = new Date();
+  const day = date.getDay();
+  const month = date.toLocaleString("fr-FR", { month: "long" });
+  const year = date.getFullYear();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+
+  const text = `Bonjour, on est le ${day}, ${month}, ${year}, et il est et il est ${hours}:${minutes}:${seconds}.`;
+
   return (
     <main>
-      <p>Ici, nous afficherons des informations interessantes :) </p>
+      <p>{text} </p>
     </main>
   );
 }
