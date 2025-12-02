@@ -25,6 +25,14 @@ function MaintContent() {
   );
 }
 
+function Footer() {
+  return (
+    <footer>
+      <p>© Tous droits réservés - LAFLEUR Stanley</p>
+    </footer>
+  );
+}
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -53,6 +61,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Footer />
     </>
   );
 }
