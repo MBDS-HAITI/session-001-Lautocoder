@@ -37,9 +37,11 @@ function MaintContent() {
 }
 
 function Footer() {
+  const anneeCourante = new Date().getFullYear();
+
   return (
     <footer>
-      <p>© Tous droits réservés - LAFLEUR Stanley</p>
+      <p>© {anneeCourante} - LAFLEUR Stanley</p>
     </footer>
   );
 }
