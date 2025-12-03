@@ -1,29 +1,29 @@
 export default function DisplayGradeRecord({ gradeRecord }) {
   return (
-    <div class="w-sm m-2 bg-white rounded-xl shadow-black shadow-2xl overflow-hidden md:max-w-md transform transition duration-500 hover:scale-105">
-      <div class="md:flex">
-        <div class="w-full p-6">
-          <div class="flex items-center justify-between border-b pb-3 mb-4">
-            <div class="uppercase tracking-wider text-sm font-bold text-indigo-600">
+    <div className="w-sm m-2 bg-white rounded-xl shadow-black shadow-2xl overflow-hidden md:max-w-md transform transition duration-500 hover:scale-105">
+      <div className="md:flex">
+        <div className="w-full p-6">
+          <div className="flex items-center justify-between border-b pb-3 mb-4">
+            <div className="uppercase tracking-wider text-sm font-bold text-indigo-600">
               Résultat d'Examen
             </div>
-            <div class="text-3xl font-extrabold text-green-600">
+            <div className="text-3xl font-extrabold text-green-600">
               {gradeRecord.grade}
             </div>
           </div>
 
-          <h1 class="text-xl font-semibold text-gray-900 mb-1">
+          <h1 className="text-xl font-semibold text-gray-900 mb-1">
             {gradeRecord.student.lastname.toUpperCase()} {gradeRecord.student.firstname}
           </h1>
-          <p class="text-sm text-gray-500 mb-4">
+          <p className="text-sm text-gray-500 mb-4">
             ID Étudiant : {gradeRecord.student.id}
           </p>
 
-          <div class="space-y-3">
-            <div class="flex justify-between items-center text-gray-700">
-              <span class="font-medium flex items-center">
+          <div className="space-y-3">
+            <div className="flex justify-between items-center text-gray-700">
+              <span className="font-medium flex items-center">
                 <svg
-                  class="w-5 h-5 mr-2 text-indigo-500"
+                  className="w-5 h-5 mr-2 text-indigo-500"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -38,12 +38,12 @@ export default function DisplayGradeRecord({ gradeRecord }) {
                 </svg>
                 Cours :
               </span>
-              <span class="font-bold text-gray-900">{gradeRecord.course}</span>
+              <span className="font-bold text-gray-900">{gradeRecord.course}</span>
             </div>
-            <div class="flex justify-between items-center text-gray-700">
-              <span class="font-medium flex items-center">
+            <div className="flex justify-between items-center text-gray-700">
+              <span className="font-medium flex items-center">
                 <svg
-                  class="w-5 h-5 mr-2 text-indigo-500"
+                  className="w-5 h-5 mr-2 text-indigo-500"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -58,7 +58,7 @@ export default function DisplayGradeRecord({ gradeRecord }) {
                 </svg>
                 Date :
               </span>
-              <span class="font-bold text-gray-900">
+              <span className="font-bold text-gray-900">
                 {new Date(gradeRecord.date).toLocaleString("fr-FR", {
                   day: "numeric",
                   month: "long",
@@ -66,10 +66,10 @@ export default function DisplayGradeRecord({ gradeRecord }) {
                 })}
               </span>
             </div>
-            <div class="flex justify-between items-center text-gray-700">
-              <span class="font-medium flex items-center">
+            <div className="flex justify-between items-center text-gray-700">
+              <span className="font-medium flex items-center">
                 <svg
-                  class="w-5 h-5 mr-2 text-indigo-500"
+                  className="w-5 h-5 mr-2 text-indigo-500"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -84,7 +84,7 @@ export default function DisplayGradeRecord({ gradeRecord }) {
                 </svg>
                 ID Unique :
               </span>
-              <span class="font-bold text-gray-900">
+              <span className="font-bold text-gray-900">
                 {gradeRecord.unique_id}
               </span>
             </div>

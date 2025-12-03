@@ -12,12 +12,9 @@ function MaintContent() {
 
   const text = `Bonjour, on est le ${day}, ${month}, ${year}, et il est et il est ${hours}:${minutes}:${seconds}.`;
   const gradeRecord = data[Math.floor(Math.random() * data.length)] 
-   console.log(data);
-   
-  
-
+ 
   return (
-    <main className="w-full flex flex-col items-center">
+    <main className="w-full flex flex-col items-center mb-8">
       <h2>{text} </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {
