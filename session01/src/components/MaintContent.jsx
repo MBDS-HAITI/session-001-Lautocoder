@@ -21,11 +21,13 @@ function MaintContent({ activePage }) {
   return (
     <main className="w-full flex flex-col items-center mb-8">
       <h2 className="p-2">{text} </h2>
+      <div className="w-auto mx-auto">
       {activePage === "home" && <Home />}
       {activePage === "grades" && <Grades />}
       {activePage === "students" && <Students />}
       {activePage === "subjects" && <Subjects />}
       {activePage === "about" && <About />}
+      </div>
     </main>
   );
 }
