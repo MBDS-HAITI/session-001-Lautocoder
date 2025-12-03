@@ -3,18 +3,20 @@ import "./App.css";
 import MaintContent from "./components/MaintContent";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Menu from "./components/Menu";
 
 
 
 
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [activePage, setActivePage] = useState("home");
 
   return (
     <>
       <Header/>
-      <MaintContent />
+      <Menu activeMenu={activePage} setActiveMenu={setActivePage} />
+      <MaintContent activePage={activePage} />
       <Footer />
     </>
   );
