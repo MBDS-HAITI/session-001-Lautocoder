@@ -9,14 +9,11 @@ const menuItems = [
     { label: "A propos", link: "#", tag: "about" },
 ];
 
-interface MenuProps {
-  activeMenu: string;
-  setActiveMenu: (menu: string) => void;
-}
-export default function Menu({activeMenu, setActiveMenu}: MenuProps) {
+
+export default function Menu({activeMenu, setActiveMenu}) {
 
 
-    const handleMenuClick = (menuItem: string) => {
+    const handleMenuClick = (menuItem) => {
         setActiveMenu(menuItem);
     }
 
@@ -26,8 +23,8 @@ export default function Menu({activeMenu, setActiveMenu}: MenuProps) {
         <div className="px-4 py-1 mx-auto">
           <div className="flex items-center">
             <ul className="flex flex-row w-full justify-center font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
-              {menuItems.map((item) => (
-                <MenuItem label={item.label} link={item.link} onClick={() => handleMenuClick(item.tag)} isActive={activeMenu===item.tag}/>
+              {menuItems.map((item,index) => (
+                <MenuItem key={index} label={item.label} link={item.link} onClick={() => handleMenuClick(item.tag)} isActive={activeMenu===item.tag}/>
                 ))}
             </ul>
           </div>
